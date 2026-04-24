@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{CjC}[2026/04/24 v0.1 GDUPT LaTeX Chinese template class] % Need to be changed with new release
+\ProvidesClass{CjC}[2019/01/01 v0.1 CjC LaTeX Chinese template class] % Need to be changed with new release
 \LoadClass[a4paper, 10.5pt,twoside,journal]{article}
 \RequirePackage{ifthen}
 \usepackage{flushend}
@@ -12,19 +12,19 @@
 \RequirePackage{ccaption}
 \RequirePackage{calc}
 %%--------PAGE FORMAT---------%%
-\setlength{\topmargin}{28pt}
+\setlength{\topmargin}{0pt}
 \setlength{\headsep}{13pt}
 \setlength{\headheight}{6mm}
-\setlength{\oddsidemargin}{-7mm}
-\setlength{\evensidemargin}{-7mm}
+\setlength{\oddsidemargin}{13pt}
+\setlength{\evensidemargin}{13pt}
 \setlength{\voffset}{-0.40in}
 \setlength{\hoffset}{0mm}
 \setlength{\footskip}{3.5em}
 \setlength{\columnsep}{8mm} %
 \textwidth \paperwidth%
 \textheight \paperheight%
-\addtolength\textwidth{-38mm}
-\addtolength\textheight{-62mm}
+\addtolength\textwidth{-63.4mm}
+\addtolength\textheight{-50.8mm}
 % extra vertical space between paragraphs normally
 \setlength{\parskip}{0mm}
 % extra vertical space between paragraphs within a list item
@@ -224,11 +224,11 @@
 \renewcommand\section{\@startsection {section}{1}{\z@}%
                                    {-1.5ex \@plus -.2ex \@minus -.2ex}%
                                    {1.5ex \@plus.2ex}%
-                                   {\zihao{4-}\bfseries }}
+                                   {\zihao{4-}\heiti }}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
                                      {-1.0ex \@plus -.2ex \@minus -.2ex}%
                                      {1.0ex \@plus .2ex}%
-                                     {\zihao{5}\bfseries}}
+                                     {\zihao{5}\heiti}}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
                                      {-0.5ex \@plus -.0ex \@minus -.2ex}%
                                      {0.5ex \@plus .0ex}%
@@ -371,8 +371,8 @@
 \AtBeginDocument{%
    \flushend
    \captiondelim{ } %
-   \captionnamefont{\small}%
-   \captiontitlefont{\small}%
+   \captionnamefont{\zihao{5-}\heiti}%
+   \captiontitlefont{\zihao{5-}\songti}%
    }
 \AtEndDocument{\clearpage}
 \endinput
