@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{CjC}[2019/01/01 v0.1 CjC LaTeX Chinese template class] % Need to be changed with new release
+\ProvidesClass{CjC}[2026/04/24 v0.1 GDUPT LaTeX Chinese template class] % Need to be changed with new release
 \LoadClass[a4paper, 10.5pt,twoside,journal]{article}
 \RequirePackage{ifthen}
 \usepackage{flushend}
