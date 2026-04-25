@@ -1,9 +1,10 @@
 %% 该模板修改自《计算机学报》latex 模板
 %% 主要是将双栏改成单栏，去掉了部分计算机学报标识；
 %% 源文件自：https://www.overleaf.com/latex/templates/latextemplet-cjc-xelatex/ybmmymncrrmw
+%% 已优化以支持 XeLaTeX 编译器
 
 \documentclass[10.5pt,UTF8]{CjC}
-\usepackage{CTEX}
+\usepackage[fontset=adobe]{ctex}
 \usepackage{graphicx}
 \usepackage{footmisc}
 \usepackage{subcaption}
@@ -14,13 +15,13 @@
 \usepackage{amsmath,amsthm}
 \usepackage{amssymb,amsfonts}
 \usepackage{booktabs}
-\usepackage{xcolor,float}
+\usepackage{xcolor}
+\usepackage{float}
 \usepackage{caption}
 \usepackage{stfloats}
 \usepackage{gbt7714}
 \graphicspath{{figures/}}
 \usepackage{captionhack}
-\usepackage{epstopdf}
 
 %===============================%
 
