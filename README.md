@@ -1,5 +1,8 @@
-
 # LaTeX GDUPT学报模板指北
+
+[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
+![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white)
+![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen)
 
 本项目基于《计算机学报》(CjC) 的 XeLaTeX 模板进行二次开发。大致符合GDUPT学报的格式要求  
 
@@ -8,9 +11,7 @@
 如需更改请参考以下目录结构及修改指南进行调整。
 
 
-[常见问题](#常见问题)|
-[📂 文件目录结构](#target-section1)|
-[🛠 关键修改参数与函数说明](#target-section2)|
+[常见问题](#常见问题) | [📂 文件目录结构](#target-section1) | [🛠 关键修改参数与函数说明](#target-section2)
 
 
 # 快速开始
