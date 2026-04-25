@@ -3,9 +3,7 @@
 [![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
 ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white)  
 
-![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen)
-
-本项目基于《计算机学报》(CjC) 的 XeLaTeX 模板进行二次开发。大致符合GDUPT学报的格式要求  
+![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen)  
 
 参考文献遵循GB/T 7741-2015标准
 
@@ -156,3 +154,6 @@
 
 ## 常见问题
 - **Overleaf预览PDF不显示** 请检查是否选择了XeLaTeX编译器，并确保浏览器是否存在插件干扰，如AdBlock等。如无法解决，请清除Cookie后再试。
+
+## 参考
+本项目基于《计算机学报》(CjC) 的 XeLaTeX 模板进行二次开发。大致符合GDUPT学报的格式要求，但可能存在细节上的差异。建议在使用前仔细对照学校的最新投稿指南进行调整。
