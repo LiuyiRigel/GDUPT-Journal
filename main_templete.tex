@@ -1,32 +1,12 @@
 %% 该模板修改自《计算机学报》latex 模板
 %% 主要是将双栏改成单栏，去掉了部分计算机学报标识；
 %% 源文件自：https://www.overleaf.com/latex/templates/latextemplet-cjc-xelatex/ybmmymncrrmw
-%% 
-%%
-%% This is file `CjC_template_tex.tex',
-%% is modified by Zhi Wang (zhiwang@ieee.org) based on the template 
-%% provided by Chinese Journal of Computers (http://cjc.ict.ac.cn/).
-%%
-%% This version is capable with Overleaf (XeLaTeX).
-%%
-%% Update date: 2023/03/10
-%% -------------------------------------------------------------------
-%% Copyright (C) 2016--2023 
-%% -------------------------------------------------------------------
-%% This file may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3c
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%    https://www.latex-project.org/lppl.txt
-%% and version 1.3c or later is part of all distributions of LaTeX
-%% version 2008 or later.
-%% -------------------------------------------------------------------
 
-\documentclass[10.5pt,compsoc,UTF8]{CjC}
+\documentclass[10.5pt,UTF8]{CjC}
 \usepackage{CTEX}
 \usepackage{graphicx}
 \usepackage{footmisc}
-\usepackage{subfigure}
+\usepackage{subcaption}
 \usepackage{url}
 \usepackage{multirow}
 \usepackage{multicol}
@@ -34,29 +14,19 @@
 \usepackage{amsmath,amsthm}
 \usepackage{amssymb,amsfonts}
 \usepackage{booktabs}
-\usepackage{color}
-\usepackage{ccaption}
-\usepackage{booktabs}
-\usepackage{float}
-\usepackage{fancyhdr}
+\usepackage{xcolor,float}
 \usepackage{caption}
-\usepackage{xcolor,stfloats}
-\usepackage{comment}
-\setcounter{page}{1}
+\usepackage{stfloats}
+\usepackage{gbt7714}
 \graphicspath{{figures/}}
-\usepackage{cuted}%flushend,
 \usepackage{captionhack}
 \usepackage{epstopdf}
-\usepackage{gbt7714}
 
 %===============================%
-
-
 
 \headevenname{\mbox{\quad} \hfill  \mbox{\zihao{-5}{ \hfill 《课程名称》  } \hspace {0mm} \mbox{2023 年 9 月}}}%
 \headoddname{作者姓名等 \hfill 报告题目}%
 
-%footnote use of *
 \renewcommand{\thefootnote}{}
 \setcounter{footnote}{0}
 \renewcommand\footnotelayout{\zihao{5-}}
@@ -68,36 +38,27 @@
 \newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}
 \renewcommand{\labelenumi}{(\arabic{enumi})}
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
-\newcommand{\abc}{\color{white}\vrule width 2pt}
 \renewcommand{\bibsection}{}
 \makeatletter
 \renewcommand{\@biblabel}[1]{[#1]\hfill}
 \makeatother
 \setlength\parindent{2em}
-%\renewcommand{\hth}{\begin{CJK*}{UTF8}{gbsn}}
-%\renewcommand{\htss}{\begin{CJK*}{UTF8}{gbsn}}
-\renewcommand{\familydefault}{\rmdefault}  % 确保宋体
-\zihao{5}
-
+\renewcommand{\familydefault}{\rmdefault}
 \begin{document}
 \zihao{5}
 \songti
-
 \hyphenpenalty=50000
+
 \makeatletter
 \newcommand\mysmall{\@setfontsize\mysmall{7}{9.5}}
-\newenvironment{tablehere}
-  {\def\@captype{table}}
-
+\newenvironment{tablehere}{\def\@captype{table}}{}
 \let\temp\footnote
 \renewcommand \footnote[1]{\temp{\zihao{-5}#1}}
+\makeatother
 
-
-\thispagestyle{plain}%
-\thispagestyle{empty}%
+\thispagestyle{empty}
 \pagestyle{plain}
 
-% \begin{table*}[!t]
 \vspace {-13mm}
 
 {
@@ -151,113 +112,74 @@
 
 % \begin{multicols}{1}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \section{\heiti 技术报告的基本要求}
 
 \subsection{一般学术论文的撰写要求}
 
 研究性论文主体应包括引言(重点论述研究的科学问题、意义、解决思路、价值、贡献等)、相关工作(为与引言部分独立的一个章节)、主要成果论述、关键实现技术、验证(对比实验或理论证明)、结论(结束语)等内容；系统实现或实验应有关键点的详细论述，以便读者能够重复实现论文所述成果。实验应有具体的实验环境设置、全面细致的数据对比分析。
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \subsection{插图格式}
-
 
 \begin{figure}[htbp]
 \centering
-\centerline{\includegraphics[width=0.6\linewidth]{CJC1.pdf}}
-\heiti 图X\quad  图片说明 *字体为小5号，图中的子图要有子图说明*
+\includegraphics[width=0.6\linewidth]{CJC1.pdf}
+\caption{图片说明 *字体为小5号，图中的子图要有子图说明*}
 \label{fig1}
 \end{figure}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%55
-
-\newpage
 
 \subsection{表格格式}
 
 \begin{table}[htbp]
-\centering {\songti 表X\quad 表说明 *表说明采用黑体*}
-% \caption{表说明 *表说明采用黑体*}
+\centering
+\songti 表X\quad 表说明 *表说明采用黑体*
 \vspace {-2.5mm}
 \begin{center}
 \begin{tabular}{ll}
 \toprule
 *示例表格*&*第1行为表头,表头要有内容* \\
 \hline
-&
- \\
-&
- \\
-&
- \\
-&
- \\
+&  \\
+&  \\
+&  \\
+&  \\
 \bottomrule
 \end{tabular}
 \label{tab1}
 \end{center}
 \end{table}
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \subsection{参考文献}
 这是参考文献示例。参考文献应遵循GB/T 7741-2015标准。引用文献1~\cite{Bohan1928}，文献2~\cite{chen1980zhongguo}，文献3-5~\cite{bravo1990comparative,niu2013zonghe,yuan2012lana}。
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\vspace {10mm}
+\zihao{5}{\noindent \textsf{致\quad 谢}\quad \textit{致谢}}
 
 \vspace {10mm}
-\zihao{5}{
-\noindent \textsf{致\quad 谢}\quad \textit{致谢}}
-
-\vspace {10mm}
-
-\centerline
-{\zihao{4-}\textsf{[参考文献]}}
-\zihao{5-} \addtolength{\itemsep}{-1em}
-
+\centerline{\zihao{4-}\textsf{[参考文献]}}
+\zihao{5-}
 
 \vspace {1.5mm}
 \bibliographystyle{gbt7714-numerical}
 \bibliography{ref.bib}
 
-
-\vspace {10mm}
-
 \newpage
 
 \begin{center}
-\zihao{4}{ \heiti Title }\\
+\zihao{4}{\heiti Title}\\
 \vspace {5mm}
-
-{\zihao{5}\songti YU Liuyi $^{1}$, YU Liuyi $^{2}$, YU Liuyi $^{3 }$}
-
+{\zihao{5}\songti YU Liuyi $^{1}$, YU Liuyi $^{2}$, YU Liuyi $^{3}$}
 \zihao{5-}{(1.Guangdong University of Petrochemical Technology, Maoming 525000, China; 2.……)}
-
-
 \end{center}
 
 \zihao{5-}{
-\setlength{\baselineskip}{18pt}\selectfont{
+\setlength{\baselinestretch}{18pt}\selectfont{
 {\bf Abstract:}
 字体为Times new Roman,字号5号* 
 \zihao{5-}{\noindent Do not modify the amount of space before and after the artworks. One- or two-column format artworks are preferred. and Tables, create a new break line and paste the resized artworks where desired. Do not modify the amount of space before and after the artworks. One- or two-column format artworks are preferred. All Schemes, Equations, Figures, and Tables should be mentioned in the text consecutively and numbered with Arabic numerals, and appear below where they are mentioned for the first time in the main text. To insert Schemes, Equations, Figures, and Tables, create a new break line and paste the resized artworks where desired. Do not modify the amount of space before and after the artworks. One- or two-column format artworks are preferred.Do not modify the amount of space before and after the artworks. One- or two-column format artworks are preferred. and Tables, create a new break line and paste the resized artworks where desired. 
 \par}}
 
 \vspace {2mm}
-
-{{\bf Keywords:}
-key word; key word; key word\par}}
+{{\bf Keywords:} key word; key word; key word\par}}
 
 \end{document}
 
