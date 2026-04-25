@@ -45,7 +45,10 @@
 
 如仍无法解决，请在项目的 "Issues" 页面提交问题，我们会尽快回复。
 
-
+## LaTex公式
+- 参考网址
+[在线编辑LaTex公式](https://www.latexlive.com/)
+[多行公式编辑](https://zhuanlan.zhihu.com/p/1921180601739900743)
 
 <h2 id="target-section1"> 📂 文件目录结构</h2>
 
