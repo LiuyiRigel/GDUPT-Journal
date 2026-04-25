@@ -107,7 +107,7 @@
 使用示例：`{\zihao{5}\songti 文本}` (小五宋体)。
 
 ### 1. 修改全局字号 (Global Font Size)
-在 **`CjC.cls`** 文件中修改基础类的加载参数：
+在 **`GDUPT-J.cls`** 文件中修改基础类的加载参数：
 * **定位：** 第 3 行 `\LoadClass[...]`
 * **说明：** `10.5pt` 对应“五号字”。若学校要求“小四”，请改为 `12pt`。
     ```latex
@@ -124,7 +124,7 @@
     ```
 
 ### 3. 修改行间距 (Line Spacing)
-行间距的调整通常在 **`CjC.cls`** 的导言区或 **`main_templete.tex`** 中全局设置：
+行间距的调整通常在 **`GDUPT-J.cls`** 的导言区或 **`main_templete.tex`** 中全局设置：
 * **参数：** `\linespread{<倍率>}`
 * **修改：**
     ```latex
@@ -142,7 +142,7 @@
     ```
 
 ### 5. 修改页边距 (Margins)
-若需修改版心大小，请在 **`CjC.cls`** 中寻找 `\setlength` 相关语句：
+若需修改版心大小，请在 **`GDUPT-J.cls`** 中寻找 `\setlength` 相关语句：
 * `\setlength{\topmargin}{28pt}` (上边距相关)
 * `\setlength{\oddsidemargin}{-7mm}` (奇数页左边距偏移)
 
