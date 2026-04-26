@@ -45,10 +45,48 @@
 
 如仍无法解决，请在项目的 "Issues" 页面提交问题，我们会尽快回复。
 
-## LaTex公式
+## LaTex相关
+**公式编辑**
+一般来说，LaTeX的公式编辑需要一定的学习成本，但一旦掌握了基本语法，就可以非常灵活地编写各种复杂的数学表达式。以下是一些常用的LaTeX公式编辑工具和资源：
+
+常用语法：
+```LaTeX
+% 行内公式
+这是一个行内公式：
+$E=mc^2$。
+
+% 独立公式
+\begin{equation}
+E=mc^2
+\end{equation}
+%或
+$$ E=mc^2 $$
+
+%带有换行的公式
+\begin{gather}
+  abc\\abcdef
+\end{gather}
+
+%引用参考文献
+%引用前需要在ref.bib文件中添加文献条目，例如：
+@article{LaTeX2026,
+  title={LaTeX: A Document Preparation System},
+  author={Leslie Lamport},
+  journal={Addison-Wesley},
+  year={2026}
+}
+
+~\cite{LaTeX2026} % 引用文献，LaTeX是文献的key
+
+%其余相关语法请参考LaTeX的相关文档或在线资源，如Overleaf的LaTeX教程等。
+
+```
+
 - 参考网址
 [在线编辑LaTex公式](https://www.latexlive.com/)
 [多行公式编辑](https://zhuanlan.zhihu.com/p/1921180601739900743)
+
+
 
 <h2 id="target-section1"> 📂 文件目录结构</h2>
 
